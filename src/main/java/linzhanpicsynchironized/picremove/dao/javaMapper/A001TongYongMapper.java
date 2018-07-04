@@ -10,7 +10,7 @@ import java.util.List;
 public interface A001TongYongMapper {
 
 
-    @Select({"select id from prdt_samp"})
+    @Select({"select id from prdt_samp where isnull(thum,'')='' and isnull(attach,'')='' "})
     List<String> getAllPrdId();
 
     @Select({"select top 1 ThumbnailID as thumbId,ImageID as attachId from lzproductbasic where id=#{myPrdId}"})

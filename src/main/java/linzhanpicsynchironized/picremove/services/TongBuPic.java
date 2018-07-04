@@ -98,7 +98,7 @@ private  org.apache.log4j.Logger l = org.apache.log4j.LogManager.getLogger(this.
 
    //通过thumId和imageId找到对方系统中对应的一个缩略图名字和多个附件名字LocalFileName
     public OnePrdtOneThumbSomeAttachUrl getOnePrdtOneThumbSomeAttachUrl(ThumIdAndAttachId t){
-        OnePrdtOneThumbSomeAttachUrl it=new OnePrdtOneThumbSomeAttachUrl();
+        OnePrdtOneThumbSomeAttachUrl it = new OnePrdtOneThumbSomeAttachUrl();
        String thumUrl= c.a001TongYongMapper.getOneThumUrl(t.getThumbId() == null ? "" : t.getThumbId());
        it.setThumUrl(thumUrl==null?"":thumUrl);
        List<String>attaches=c.a001TongYongMapper.getSomeAttachUrl(t.getAttachId()==null?"":t.getAttachId());
