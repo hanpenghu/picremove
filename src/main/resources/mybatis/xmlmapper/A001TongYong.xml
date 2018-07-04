@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="linzhanpicsynchironized.picremove.test.dao.javaMapper.A001TongYongMapper">
+<mapper namespace="linzhanpicsynchironized.picremove.dao.javaMapper.A001TongYongMapper">
 
 
 
+    <select id="getOneThumUrl" resultType="java.lang.String">
 
+        select top 1 'suoLueTuAndFuJian/'+LocalFileName+';' from  lzproductimage where FKID = #{thumbnailID}
+    </select>
+
+<select id="getSomeAttachUrl" resultType="java.lang.String">
+
+    select 'suoLueTuAndFuJian/'+LocalFileName+';' from  lzproductimage where FKID =#{attachId}
+</select>
 
 
 
